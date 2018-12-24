@@ -298,6 +298,11 @@ void MainWindow::on_checkBox_serialPortRevToFile_clicked()
             desFile = fileDialog->selectedFiles()[0];
 
         }
+        if(desFile == "")
+        {
+            ui->checkBox_serialPortRevToFile->setChecked(false);
+            return;
+        }
         serialPortRevDesFile = desFile;
 
         ui->textEdit_SerialPortRev->append("接收转向文件");
@@ -460,6 +465,12 @@ void MainWindow::on_checkBox_netPortRevToFile_clicked()
 
         }
         netPortRevDesFile = desFile;
+
+        if(desFile == "")
+        {
+            ui->checkBox_netPortRevToFile->setChecked(false);
+            return;
+        }
 
         ui->textEdit_netRev->append("接收转向文件");
         ui->textEdit_netRev->append(desFile);

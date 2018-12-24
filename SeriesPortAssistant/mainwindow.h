@@ -24,7 +24,7 @@ public:
     QString endLine = "\r\n";
 
     //串口对象
-    QSerialPort *serialPort = NULL;
+    QSerialPort  *serialPort = NULL;
     QString serialPortName;
     //波特率
     int baudRate = 0;
